@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS likers CASCADE;
+
+CREATE TABLE likers (
+  PRIMARY KEY (user_id, liker_id),
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  liker_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+);
