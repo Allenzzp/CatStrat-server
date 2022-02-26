@@ -34,11 +34,11 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", DEV_URL);
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", DEV_URL);
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 app.use(morgan(ENVIRONMENT));
 
@@ -324,6 +324,6 @@ app.post("/buystrat", (req, res) => {
 
 
 // connect to PORT
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
