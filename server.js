@@ -31,7 +31,7 @@ db.connect((err) => {
 app.use(cors({
   origin: [DEV_URL],
   methods: ["GET", "POST", "DELETE", "PUT"],
-  credentials: true
+  // credentials: true
 }));
 app.use(morgan(ENVIRONMENT));
 
