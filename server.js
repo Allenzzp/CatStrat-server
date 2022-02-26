@@ -29,7 +29,7 @@ db.connect((err) => {
 
 //Middleware
 app.use(cors({
-  origin: [DEV_URL, "https://www.google.com/"],
+  origin: true,
   methods: ["GET", "POST", "DELETE", "PUT"],
   credentials: true
 }));
