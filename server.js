@@ -34,11 +34,15 @@ app.use(cors({
   credentials: true
 }));
 
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", DEV_URL);
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
+app.use(function (req, res, next) {
+
+  res.setHeader('Access-Control-Allow-Origin', 'https://catstrat-lhl.netlify.app/');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  next();
+});
 
 app.use(morgan(ENVIRONMENT));
 
