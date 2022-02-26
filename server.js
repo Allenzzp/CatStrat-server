@@ -28,11 +28,11 @@ db.connect((err) => {
 });
 
 //Middleware
-app.use(cors({
-  origin: ["https://catstrat-lhl.netlify.app/"],
-  methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS", "HEAD"],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ["https://catstrat-lhl.netlify.app/"],
+//   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS", "HEAD"],
+//   credentials: true
+// }));
 
 app.use(function (req, res, next) {
 
@@ -43,7 +43,7 @@ app.use(function (req, res, next) {
 
   next();
 });
-
+app.use(cors());
 app.use(morgan(ENVIRONMENT));
 
 // allows api to parse json // both .json works but you need to use one
