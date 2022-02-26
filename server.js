@@ -28,11 +28,13 @@ db.connect((err) => {
 });
 
 // Middleware
-app.use(cors({
-  origin: [DEV_URL],
-  methods: ["GET", "POST", "DELETE", "PUT"],
-  // credentials: true
-}));
+// app.use(cors({
+//   origin: [DEV_URL],
+//   methods: ["GET", "POST", "DELETE", "PUT"],
+//   credentials: true
+// }));
+app.use(cors());
+
 app.use(morgan(ENVIRONMENT));
 
 // allows api to parse json // both .json works but you need to use one
