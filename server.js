@@ -34,6 +34,12 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", DEV_URL);
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(morgan(ENVIRONMENT));
 
 // allows api to parse json // both .json works but you need to use one
