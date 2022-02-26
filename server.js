@@ -27,13 +27,12 @@ db.connect((err) => {
   }
 });
 
-// Middleware
-// app.use(cors({
-//   origin: [DEV_URL],
-//   methods: ["GET", "POST", "DELETE", "PUT"],
-//   credentials: true
-// }));
-app.use(cors());
+//Middleware
+app.use(cors({
+  origin: [DEV_URL],
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true
+}));
 
 app.use(morgan(ENVIRONMENT));
 
