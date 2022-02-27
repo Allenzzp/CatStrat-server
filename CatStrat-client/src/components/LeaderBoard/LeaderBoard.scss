@@ -1,0 +1,177 @@
+@import "../../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Noto+Serif+Display:ital@1&display=swap');
+
+.ld {
+  width: 90%;
+  height: 90%;
+  margin: 2.5% auto 2.5% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $white;
+  box-shadow: 0 8px 10px rgb(0 0 0 / 10%);
+  border-radius: 30px;
+
+  &__item {
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  &__head {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      width: 45%;
+      background-color: white;
+      border-radius: 1rem;
+      margin: 0 1rem;
+      font-size: larger;
+    }
+
+    &--selected {
+      // background-color: $white;
+      background-color: #ffd55a;
+      font-weight: bold;
+    }
+
+  }
+
+  &__top-winner {
+    height: 30%;
+    background-color: $white;
+    &__list {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      &__item {
+        display: flex;
+        border-radius: 1rem;
+        padding-right: 1rem;
+        position: relative;
+        box-shadow: 0 8px 10px rgb(0 0 0 / 10%);
+        background-color: whitesmoke;
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .winner-2 {
+      height: 75%;
+      width: 30%;
+      order: 2;
+      // align-self: flex-end;
+      // margin-bottom: 1.5rem;
+    }
+    .winner-1 {
+      height: 100%;
+      width: 38%;
+      order: 1;
+      // align-self: flex-start;
+    }
+    .winner-3 {
+      height: 60%;
+      width: 30%;
+      order: 3;
+      // align-self: flex-end;
+    }
+
+  }
+
+  &__loser {
+    height: 50%;
+
+    &__title {
+      color:black;
+      height: 15%;
+      padding-bottom: .5rem;
+      padding-top: .75rem;
+      // font-family: 'Noto Serif Display', serif;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+    }
+
+    &__table {
+      width: 100%;
+      height: 80%;
+      border-collapse: collapse;
+
+      &__header {
+        color: $black;
+        font-size: larger;
+        font-weight: 500;
+
+        &__item {
+          text-align: center;
+          background-color: white;
+          font-family: 'Mukta', sans-serif;
+          border-bottom: 2px solid black;
+        }
+        
+      }
+
+      &__body {
+
+        &__item {
+          text-align: center;
+          font-size: large;
+          
+        }
+      }
+    }
+  }
+}
+
+.even-tr {
+  // background-color: azure;
+  background-color: white;
+
+}
+
+.odd-tr-rank {
+  // background-color:beige;
+  background-color: white;
+
+}
+
+.winner {
+
+  &__rank {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: block;
+    color: gold;
+    font-size: xx-large;
+    font-weight: 900;
+  }
+  &__img {
+    height: 100%;
+    // width: 50%;
+    display: block;
+    border-radius: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  &__body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__tag {
+      font-family: 'Mukta', sans-serif;
+      font-size: large;
+      font-weight: 500;
+    }
+  }
+}

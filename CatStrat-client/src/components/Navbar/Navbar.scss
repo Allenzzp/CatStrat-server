@@ -1,0 +1,117 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  width: 100%;
+  background-color: lighten($navbar-background, 15%);
+  min-height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  position:relative;
+
+
+  button {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background-color: transparent;
+    color: $black;
+    border: solid $black 2px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  &__button &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__notice {
+    position: relative;
+    margin-right: 0.5rem;;
+    p {
+      margin: 0;
+      padding-top: 1.5px;
+      padding-left: 2px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: solid red 1px;
+      border-radius: 50%;
+      background-color: red;
+      font-size: small;
+      color: $white;
+      width: 40px;
+      height: 20px;
+    }
+    button {
+      padding: 0 1.8rem 0 0;
+      color: black;
+      margin: 0;
+      border: none;
+      background-color: lighten($navbar-background, 15%);
+    }
+  }
+
+  &__badge {
+    margin-top: 2px;
+    background-color: red;
+    min-width: 15px;
+    min-height: 10px;
+    margin-right: 5px;
+  }
+
+  &__coin {
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+      margin-right: 0.3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    p {
+      font-weight:bolder;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-left:20px;
+    margin-right:10px;
+    cursor: pointer;
+
+
+    &__name {
+      margin: 0 1rem 0 0.5rem;
+    }
+  }
+    
+  &__user &__avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+
+}
+
+.searchbar-placement {
+  align-items: center;
+}
+
+.logout {
+  cursor: pointer;
+  border-radius: 20px;
+  color: $navbar-background;
+  background-color:black;
+
+  &:hover {
+    color:red;
+  }
+}

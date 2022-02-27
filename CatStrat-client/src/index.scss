@@ -1,0 +1,17 @@
+@import "~normalize.css/normalize.css";
+@import "styles/variables.scss";
+@import "styles/reset.scss";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+}
+
+
+
+
+html, body, #root { height: 100%;   width: 100%; margin: 0; padding: 0; }

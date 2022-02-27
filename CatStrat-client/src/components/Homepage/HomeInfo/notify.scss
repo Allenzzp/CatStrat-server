@@ -1,0 +1,36 @@
+.notify-one {
+  height: 68px;
+  width: 205px;
+  z-index: 50;
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  // left: 63px;
+}
+
+.notify-two {
+  height: 68px;
+  width: 205px;
+  z-index: 40;
+  position: absolute;
+  // top: 265px;
+  top: 245px;
+  left: -20px;
+  // left: 63px;
+}
+
+.notify-three {
+  opacity: 0;
+  height: 258px;
+  width: 400px;
+  z-index: 40;
+  position: absolute;
+  // top: 265px;
+  top: 137px;
+  left: 100px;
+  // left: 63px;
+}
+
+.notify-four {
+  opacity: 1
+}

@@ -1,0 +1,74 @@
+.container-cat {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.catbox {
+  width: 55%;
+}
+
+#cat {
+  width: 100%;
+  height: 100vh;
+}
+
+.login-form {
+  height: 550px;
+  width: 420px;
+  // box-sizing: border-box;
+  // border: solid rgb(170, 204, 215);
+  margin-left: 80px;
+  margin-top: 130px;
+}
+
+.center-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border: none;
+  margin: auto;
+}
+
+.text-dec {
+  text-decoration: underline;
+}
+
+#span-text {
+  font-weight: 200;
+}
+
+.buttonid {
+  align-self: center;
+  box-sizing: border-box;
+  padding: 16px 40px;
+  font-size: 20px;
+  margin-right: 275px;
+  margin-top: 10px;
+  background: #74c947;
+  color: #fff;
+  border: 0px;
+  border-radius: 4px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: sans-serif;
+
+  &:hover {
+    background: #c82828;
+  }
+}
+
+input {
+  height: 45px;
+  font-size: 15px;
+}
+
+.login-text {
+  font-family: "Roboto Slab";
+  margin-bottom: 40px;
+  color: #000;
+  font-size: 32px;
+}

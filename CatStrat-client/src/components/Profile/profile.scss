@@ -1,0 +1,466 @@
+.profile-container {
+  // overflow: hidden;
+  display: flex;
+  box-sizing: border-box;
+  // border: 3px solid green;
+  height: 100%;
+  width: 100%;
+  position: static;
+  // box-shadow: 5px 10px 18px rgb(165, 165, 165);
+  background-color: #f0f2f5;
+}
+
+.profile-container-side {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 30px 30px;
+  box-sizing: border-box;
+  // border: 3px solid blue;
+  width: 350px;
+  position: relative;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-top: 15px;
+
+  .avatar {
+    margin: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    // border: 3px solid rgb(108, 108, 17);
+    height: 200px;
+    width:220px;
+  }
+  
+  .profile-social {
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    // justify-content: space-evenly;
+    margin: 15px;
+    // margin-bottom: 10px;
+    // margin-left:15px;
+    // margin-top:15px;
+    font-size:18px;
+
+    box-sizing: border-box;
+    // border: 3px solid rgb(125, 125, 16);
+    height: 420px;
+    position: relative;
+    background-color: #fff;
+  }
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.profile-container-main {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 30px 30px 0;
+  box-sizing: border-box;
+  padding-left:15px;
+  // border: 3px solid blue;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+
+  .profile-about {
+    display: flex;
+    margin: 0px 0px 0px 0px;
+    // box-sizing: border-box;
+    // border: 3px solid rgb(108, 19, 113);
+    position: relative;
+    width: 95%;
+    height: 220px;
+    background-color: #fff;
+
+    .user-profile {
+      margin-right: 15px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      // border: 3px solid rgb(19, 113, 46);
+      position: relative;
+      // width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: #fff;
+
+      .profile-separator {
+        box-sizing: border-box;
+        // border: 3px solid rgb(19, 113, 46);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+
+        .follow-btn {
+          position: relative;
+          display: flex;
+          // justify-content: space-between;
+          align-items: flex-end;
+          margin-top: 20px;
+          background-color: #fff;
+        }
+      }
+
+      .follow-separator {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        padding-right:240px;
+        margin-left: 50px;
+        // border: 3px solid rgb(19, 113, 46);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #fff;
+        .f-number {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          background-color: #fff;
+          padding-right: 50px;
+        }
+        .f-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          background-color: #fff;
+        }
+      }
+    }
+    
+    .stock-profile {
+      box-sizing: border-box;
+      // border: 3px solid rgb(19, 113, 46);
+      position: relative;
+      width: 90%;
+      height: 100%;
+      position: relative;
+      background-color: #fff;
+    }
+  }
+
+  .profile-graph {
+    border-radius: 15px;
+    // overflow: scroll;
+    display: flex;
+    // align-items: center;
+    // margin: 0px 15px 15px 15px;
+    box-sizing: border-box;
+    // border: 3px solid rgb(108, 19, 113);
+    position: relative;
+    width: 100%;
+    height: 90%;
+    background-color: #fff;
+    font-size: 12px;
+
+    .graph1-btn {
+      z-index: 100;
+      position: relative;
+      margin-left: 150px;
+      bottom: 256px;
+      font-size: 18px;
+      // background-color: rgb(26, 157, 30);
+      color: white;
+      border-radius: 4px;
+      padding: 5px 10px;
+      // visibility: visible;
+    }
+  
+    .graph1 {
+ 
+      margin-top: 15px;
+      // margin-right: 15px;
+      box-sizing: border-box;
+      // border: 3px solid rgb(19, 113, 25);
+      position: relative;
+      width: 50%;
+      background-color: #fff;
+
+      .graph-chart {
+        opacity: 0.05;
+
+        &--bought {
+          opacity: 1;
+        }
+      }
+    }
+    .graph2 {
+      display: flex;
+      margin-top: 15px;
+      // right: px;
+      // margin-left: 15px;
+      box-sizing: border-box;
+      // border: 3px solid rgb(19, 113, 46);
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+.table-container {
+  // overflow: scroll;
+  padding-top: 40px;
+  margin-left:40px;
+  margin-right: 40px;
+  position: relative;
+  box-sizing: 1px solid black;
+  width: 100%;
+
+  .table-columns {
+    position: relative;
+
+    // .one-a {
+    //   font-size: 20px;
+    //   width: 35%;
+    // }
+    .one-b {
+      // padding-left: 260px;
+      font-size: 20px;
+      padding-bottom: 10px;
+      // width: 65%;
+    }
+  }
+
+  .table-rows {
+    box-sizing: border-box;
+    // border: 1px solid red;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  
+    .one {
+      margin-left: 10px;
+      width: 20%;
+      font-size: 18px;
+    }
+    .two {
+      margin-left: 15px;
+      margin-right: 25px;
+      width: 76%;
+      font-size: 18px;
+      word-wrap: break-word;
+    }
+    .three {
+      margin-left: 5px;
+      margin-right: 14px;
+      width: 12%;
+      font-size: 18px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .four {
+      margin-left: 2px;
+      width: 12%;
+      font-size: 18px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+.catecoin {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.icons-i {
+  &:hover {
+    color: rgb(22, 184, 57);
+    cursor: pointer;
+  }
+}
+.icons-s {
+  text-align: center;
+  color: rgb(223, 217, 43);
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+}
+.icons-t {
+  color: black;
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  &-inside {
+    margin-right: 10px;
+    color: rgb(116, 71, 11);
+  }
+}
+
+.profile-username {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.progressbar {
+  position: relative;
+  top: 30px;
+  color: #03A9F4;
+  margin-left: 34px;
+  margin-top: 20px;
+
+  .votes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 35px;
+    position: relative;
+    font-size: 24px;
+
+    .up {
+      margin-right: .7em;
+      &:hover {
+        color: darkblue;
+        cursor: pointer;
+      }
+
+      #upvote-a {
+        margin-right: 5px;
+      }
+    }
+
+    .down {
+      margin-right: 14em;
+      &:hover {
+        cursor: pointer;
+        color: darkblue;
+      }
+
+      #downvote-b {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.last-online {
+  font-size: 14px;
+}
+
+.follow-number {
+  font-weight: bold;
+}
+
+.profit-goal-text {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.fb1 {
+  margin-right: 10px;
+}
+
+#edit-btn {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: white;
+  float: right;
+  background-color: rgb(179, 179, 179);
+  margin-top: 20px;
+}
+
+#follow-btn-id {
+  font-size: 16px;
+  margin-left: 20px;
+  color: white;
+  background-color: rgb(235, 130, 38);
+}
+
+// .btn-strat {
+// }
+
+// .buy-strat {
+//   align-self: center;
+//   position: relative;
+//   background-color: rgb(63, 63, 63);
+//   // color: white;
+//   border-radius: 4px;
+//   padding: 5px 10px;
+// }
+
+.g2-container {
+  box-sizing: border-box;
+  border: 1px solid darkgrey;
+  margin-right: 25px;
+  height: 400px;
+
+  #g2-btn {
+    font-size: 18px;
+    margin-top: 170px;
+    margin-left: 310px;
+    z-index: 200;
+    background-color: rgb(26, 157, 30);
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+#compare-id {
+  margin-left: 90px;
+  font-size: 16px;
+  background-color: rgb(160, 45, 198);
+}
+
+.accordian-content {
+  display: flex;
+  justify-content: end;
+  padding-bottom:10px;
+  padding-right:10px;
+  font-size: 30px;
+}
+
+.typography-upvote {
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.typography-downvote {
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fc-upvote {
+  margin-right: 20px;
+}
+
+.purchase-g1-graph {
+  // position:absolute;
+  position: relative;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
