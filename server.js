@@ -65,7 +65,7 @@ app.use("/calendar", calendarRoutes(db));
 app.use("/stock", stockRoutes(db));
 app.use("/strategy", strategyRoutes(db));
 app.use("/leaderBoard", leaderBoardRoutes(db));
-app.use("/login", loginRoutes(db))
+app.use("/login", loginRoutes(db, connectionString))
 app.use("/register", registerRoutes(db))
 app.use("/strategies", strategiesRoutes(db))
 app.use("/profile", profileRoutes(db))
