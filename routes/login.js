@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
 const secret = "secretString12345"
 
-const login = (db, dbParams) => {
+const login = (db) => {
 
   router.post("/", (req, res) => {
     const username = req.body.username;

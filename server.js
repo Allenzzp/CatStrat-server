@@ -18,7 +18,8 @@ const { ENVIRONMENT, DEV_URL } = process.env;
 // PG database client/connection setup
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
-const db = new Pool(dbParams);
+const cs = dbParams.connectionString;
+const db = new Pool({ cs });
 db.connect((err) => {
   console.log('Connected to db');
   if (err) {
@@ -64,7 +65,7 @@ app.use("/calendar", calendarRoutes(db));
 app.use("/stock", stockRoutes(db));
 app.use("/strategy", strategyRoutes(db));
 app.use("/leaderBoard", leaderBoardRoutes(db));
-app.use("/login", loginRoutes(db, dbParams))
+app.use("/login", loginRoutes(db))
 app.use("/register", registerRoutes(db))
 app.use("/strategies", strategiesRoutes(db))
 app.use("/profile", profileRoutes(db))
