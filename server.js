@@ -29,7 +29,7 @@ db.connect((err) => {
 
 //Middleware
 app.use(cors({
-  origin: ["https://catstrat-lhl.netlify.app/"],
+  origin: "https://catstrat-lhl.netlify.app/",
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS", "HEAD"],
   credentials: true
 }));
