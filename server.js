@@ -1,5 +1,5 @@
 // load .env data into process.env
-require("dotenv").config({path: "./env/build"});
+require("dotenv").config({path: "./.env.build"});
 
 // Web server config
 const PORT = process.env.PORT || 8080;
