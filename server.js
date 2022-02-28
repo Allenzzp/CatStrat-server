@@ -18,8 +18,8 @@ const { ENVIRONMENT, DEV_URL } = process.env;
 // PG database client/connection setup
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
-const cs = dbParams.connectionString;
-const db = new Pool({ cs });
+const connectionString = dbParams.connectionString;
+const db = new Pool({ connectionString });
 db.connect((err) => {
   console.log('Connected to db');
   if (err) {
