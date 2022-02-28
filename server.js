@@ -19,11 +19,11 @@ const { ENVIRONMENT, DEV_URL } = process.env;
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
 const connectionString = dbParams.connectionString;
-const db = new Pool({ connectionString });
+const db = new Pool({ connectionString, });
 db.connect((err) => {
   console.log('Connected to db');
   if (err) {
-  return console.log('Error with db connection:', err)
+    return console.log('Error with db connection:', err)
   }
 });
 
@@ -65,7 +65,7 @@ app.use("/calendar", calendarRoutes(db));
 app.use("/stock", stockRoutes(db));
 app.use("/strategy", strategyRoutes(db));
 app.use("/leaderBoard", leaderBoardRoutes(db));
-app.use("/login", loginRoutes(db, connectionString))
+app.use("/login", loginRoutes(db))
 app.use("/register", registerRoutes(db))
 app.use("/strategies", strategiesRoutes(db))
 app.use("/profile", profileRoutes(db))
