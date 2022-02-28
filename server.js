@@ -1,5 +1,6 @@
 // load .env data into process.env
-require("dotenv").config({path: "./.env.build"});
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "./.env.build") });
 
 // Web server config
 const PORT = process.env.PORT || 8080;
@@ -10,7 +11,6 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const jwt = require('jsonwebtoken')
-const morgan = require('morgan');
 const secret = "secretString12345"
 
 // Environment variables
