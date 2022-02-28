@@ -8,13 +8,10 @@ const login = (db) => {
   router.post("/", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-
-    alert("here1");
   
     return db
       .query(`SELECT * FROM users WHERE username = $1`, [username])
       .then((result) => {
-        console.log("here2")
         if (result.rows.length > 0) {
           bcrypt.compare(password, result.rows[0].password, (error, response) => {
             if (response) {
@@ -24,7 +21,6 @@ const login = (db) => {
                 username,
                 token
               }
-              alert(loginData);
               res.send(loginData);
             } else {
               res.send({message: "Wrong username/password"});
