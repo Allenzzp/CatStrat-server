@@ -9,7 +9,7 @@ const login = (db) => {
     const username = req.body.username;
     const password = req.body.password;
 
-    console.log("here1")
+    alert("here1");
   
     return db
       .query(`SELECT * FROM users WHERE username = $1`, [username])
@@ -24,6 +24,7 @@ const login = (db) => {
                 username,
                 token
               }
+              alert(loginData);
               res.send(loginData);
             } else {
               res.send({message: "Wrong username/password"});
