@@ -316,8 +316,6 @@ app.post("/buystrat", (req, res) => {
 //   })
 // })
 
-app.use(express.static(path.join(__dirname, "/CatStrat-client")));
-
 // connect to PORT
 app.listen(process.env.PORT || 8080, () => {
   console.log(`Server is listening on port ${PORT}`);
