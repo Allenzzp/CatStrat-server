@@ -16,10 +16,15 @@ const secret = "secretString12345"
 const { ENVIRONMENT, DEV_URL } = process.env;
 
 // PG database client/connection setup
-const { Pool } = require("pg");
+const { Client } = require("pg");
 // const dbParams = require("./lib/db.js");
-const connectionString = process.env.DATABASE_URL;
-const db = new Pool({ connectionString });
+const db = new Client(
+  { connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  });
+
 db.connect((err) => {
   console.log('Connected to db');
   if (err) {
