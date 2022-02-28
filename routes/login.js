@@ -8,7 +8,8 @@ const login = (db, dbParams) => {
   router.post("/", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-    res.send(dbParams.connectionString);
+    res.send(dbParams);
+    
     return db
       .query(`SELECT * FROM users WHERE username = $1`, [username])
       .then((result) => {
