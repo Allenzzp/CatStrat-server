@@ -3,12 +3,12 @@ const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
 const secret = "secretString12345"
 
-const login = (db) => {
+const login = (db, dbParams) => {
 
   router.post("/", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
-
+    res.send(dbParams);
     return db
       .query(`SELECT * FROM users WHERE username = $1`, [username])
       .then((result) => {

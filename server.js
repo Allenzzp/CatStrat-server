@@ -34,20 +34,11 @@ app.use(cors({
   credentials: true
 }));
 
-//app.use(morgan(ENVIRONMENT));
-
-// allows api to parse json // both .json works but you need to use one
 app.use(express.json());
 // app.use(bodyParser.json())
 
-// allow api to receive data from client app // can use either
-
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
-
-// app.get('/', (req, res) => {
-//   res.json({ greetings: 'hello' });
-// })
 
 // Require routes
 const dashboardRoutes = require('./routes/dashboard');
@@ -74,7 +65,7 @@ app.use("/calendar", calendarRoutes(db));
 app.use("/stock", stockRoutes(db));
 app.use("/strategy", strategyRoutes(db));
 app.use("/leaderBoard", leaderBoardRoutes(db));
-app.use("/login", loginRoutes(db))
+app.use("/login", loginRoutes(db, dbParams))
 app.use("/register", registerRoutes(db))
 app.use("/strategies", strategiesRoutes(db))
 app.use("/profile", profileRoutes(db))
@@ -84,9 +75,6 @@ app.use("/unfollow", unfollowRoutes(db))
 app.use("/like", likeRoutes(db))
 app.use("/dislike", dislikeRoutes(db))
 app.use("/history", historyRoutes(db))
-
-
-
 
 
 // Handle Upvote a strategy
