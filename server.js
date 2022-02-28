@@ -23,7 +23,8 @@ const db = new Client(
     ssl: {
       rejectUnauthorized: false
     }
-  });
+  }
+);
 
 db.connect((err) => {
   console.log('Connected to db');

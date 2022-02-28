@@ -6,8 +6,13 @@ const fs = require('fs');
 const chalk = require('chalk');
 // const Client = require('pg-native');
 const { Client } = require("pg");
-const dbParams = require("../lib/db.js");
-const db = new Client(dbParams);
+const db = new Client(
+  { connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  }
+);
 const Axios = require("axios");
 //stock symbols setup
 const finnhub = require('finnhub');
@@ -73,11 +78,6 @@ const getStockSymbols = async () => {
 
 const runResetDB = async () => {
   try {
-    // console.log(`-> Connecting to PG using ${connectionString} ...`);
-    dbParams.host &&
-      console.log(`-> Connecting to PG on ${dbParams.host} as ${dbParams.user}...`);
-    dbParams.connectionString &&
-      console.log(`-> Connecting to PG with ${dbParams.connectionString}...`);
     await db.connect();
     // await client.connectSync(connectionString);
     await runSchemaFiles();
